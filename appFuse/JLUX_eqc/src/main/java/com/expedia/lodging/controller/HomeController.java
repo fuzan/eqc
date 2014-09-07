@@ -20,7 +20,7 @@ public class HomeController {
 	public IContent content;
 
 	
-	@RequestMapping("/content/home")
+	@RequestMapping("/content/{home}")
 	public String home(Map<String, Object> model,
 			@RequestParam(value="localeID", required=false) 
 			String localeID) {
