@@ -11,9 +11,12 @@ public class ContentImp extends RepositoryBase implements IContent{
 		return entityManager.createQuery("from LocaleContent",LocaleContent.class).getResultList();
 	}
 
-	public LocaleContent findByLocaleId(String localeID) {
-		Integer localeID_integer = Integer.parseInt(localeID);
-		return entityManager.createQuery("from LocaleContent lc where lc.locale_id = ? ",LocaleContent.class).setParameter(1, localeID_integer).getSingleResult();
+	public LocaleContent findByLocaleId(int localeID) {
+		return entityManager.createQuery("from LocaleContent lc where lc.locale_id = ? ",LocaleContent.class).setParameter(1, localeID).getSingleResult();
+	}
+
+	public LocaleContent findByLocaleIdAndPageId(int localeID, int pageId) {
+		return entityManager.createQuery("from LocaleContent lc where lc.locale_id = ? and lc.page_id = ?",LocaleContent.class).setParameter(1, localeID).setParameter(2, pageId).getSingleResult();
 	}
 
 }

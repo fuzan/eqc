@@ -10,6 +10,8 @@ public class LocaleMappingLoadService  implements ApplicationListener<ContextRef
 
 	private Logger log = LoggerFactory.getLogger(this.getClass());
 	
+	
+	
 	public void onApplicationEvent(ContextRefreshedEvent event) {
 		// TODO Auto-generated method stub
 		log.debug(" Init the locale map : " + event.getApplicationContext().getApplicationName());
