@@ -1,17 +1,10 @@
 package com.expedia.lodging.repository.imp;
 
 import java.util.List;
-
-import javax.persistence.EntityManager;
-import javax.persistence.PersistenceContext;
-
 import com.expedia.lodging.entity.LocaleContent;
 import com.expedia.lodging.repository.IContent;
 
-public class ContentImp implements IContent{
-
-	@PersistenceContext
-    private EntityManager entityManager;
+public class ContentImp extends RepositoryBase implements IContent{
 	
 	
 	public List<LocaleContent> findAll() {

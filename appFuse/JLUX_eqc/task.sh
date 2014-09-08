@@ -47,6 +47,6 @@ else
     echo " ./task.sh --1 means copy the built war file to tomcat webapps ."
     echo " ./task.sh --2 means copy the classes to the tomcat classes folder, if any minion changes."
     echo " ./task.sh --2 --3 means copy the classes to the tomcat classes folder, if any minion changes, and then delete the war, ----- this is deprecated."
-	echo " ./task.sh --4 for bug fixing slf4j."
+	echo " ./task.sh --4 for bug fixing for slf4j."
     echo "------------------------------------------------------------------------------------------"
 fi

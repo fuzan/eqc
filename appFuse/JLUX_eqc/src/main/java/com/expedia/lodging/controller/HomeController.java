@@ -14,6 +14,7 @@ import com.expedia.lodging.repository.IContent;
 
 @Controller
 public class HomeController {
+	
 	private Logger log = LoggerFactory.getLogger(this.getClass());
 
 	@Autowired

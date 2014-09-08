@@ -74,6 +74,10 @@ http://www.springframework.org/schema/jee/spring-jee-2.0.xsd">
 		<property name="jpaDialect" ref="jpaDialect" />
 	</bean>
 	
+	<bean id="appStartedEventHandler" 
+         class="com.expedia.lodging.init.AfterStartListenser"/>
+	
+	
 	<bean id="content" class="com.expedia.lodging.repository.imp.ContentImp"></bean>
 
 </beans>
