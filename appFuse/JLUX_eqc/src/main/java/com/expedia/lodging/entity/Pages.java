@@ -16,7 +16,7 @@ public class Pages {
 	private int site_id;
 	private int creator_id;
 	private Date created_at;
-	private Date update_at;
+	private Date updated_at;
 	private int position;
 	private int has_login;
 	private int show_in_nav;
@@ -56,11 +56,11 @@ public class Pages {
 	public void setCreated_at(Date created_at) {
 		this.created_at = created_at;
 	}
-	public Date getUpdate_at() {
-		return update_at;
+	public Date getUpdated_at() {
+		return updated_at;
 	}
-	public void setUpdate_at(Date update_at) {
-		this.update_at = update_at;
+	public void setUpdated_at(Date updated_at) {
+		this.updated_at = updated_at;
 	}
 	public int getPosition() {
 		return position;
@@ -104,10 +104,4 @@ public class Pages {
 	public void setActive(int active) {
 		this.active = active;
 	}
-	
-	
-	
-	
-	
-	
 }

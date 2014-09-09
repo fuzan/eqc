@@ -19,6 +19,6 @@ public class Validation {
 		if( str == null || "".equals(str.trim()))
 			return true;
 		return false;
-	}
+	} 
 	
 }

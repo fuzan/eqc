@@ -4,6 +4,7 @@
 	xmlns:jee="http://www.springframework.org/schema/jee"
 	xmlns:tx="http://www.springframework.org/schema/tx"
 	xmlns:jpa="http://www.springframework.org/schema/data/jpa" 
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
 	xsi:schemaLocation="
  
 http://www.springframework.org/schema/beans
@@ -24,7 +25,11 @@ http://www.springframework.org/schema/tx/spring-tx-2.5.xsd
 
 http://www.springframework.org/schema/jee 
 
-http://www.springframework.org/schema/jee/spring-jee-2.0.xsd">
+http://www.springframework.org/schema/jee/spring-jee-2.0.xsd
+
+http://www.springframework.org/schema/mvc 
+
+http://www.springframework.org/schema/mvc/spring-mvc.xsd">
 
 
 	<context:component-scan base-package="com.expedia.lodging" />
@@ -73,6 +78,7 @@ http://www.springframework.org/schema/jee/spring-jee-2.0.xsd">
         <property name="jpaVendorAdapter" ref="jpaVendorAdapter"/>
 		<property name="jpaDialect" ref="jpaDialect" />
         <property name="packagesToScan" value="com.expedia.lodging.entity"/>
+        <property name="persistenceUnitName" value="EQCPersistenceUnit"/>
     </bean>
 
 	<bean id="jpaVendorAdapter"
@@ -90,13 +96,14 @@ http://www.springframework.org/schema/jee/spring-jee-2.0.xsd">
 		<property name="jpaDialect" ref="jpaDialect" />
 	</bean>
 	
-	<bean id="appStartedEventHandler" 
-         class="com.expedia.lodging.init.LocaleMappingLoadService"/>
+	<mvc:interceptors>
+	    <mvc:interceptor>
+	        <mvc:mapping path="/content/*"/>
+	        <mvc:exclude-mapping path="/admin/"/>
+	        <bean class="org.springframework.web.servlet.theme.ThemeChangeInterceptor" />
+	    </mvc:interceptor>
+	</mvc:interceptors>
 	
-	
-	<bean id="content" class="com.expedia.lodging.repository.imp.ContentImp"></bean>
-
-
                                      
 	<bean id="messageSource"  class="org.springframework.context.support.ResourceBundleMessageSource">
         <property name="basename" value="META-INF/messages/messages" />

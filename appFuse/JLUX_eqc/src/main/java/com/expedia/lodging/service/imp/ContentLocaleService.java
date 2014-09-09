@@ -1,4 +1,4 @@
-package com.expedia.lodging.service;
+package com.expedia.lodging.service.imp;
 
 import java.util.List;
 

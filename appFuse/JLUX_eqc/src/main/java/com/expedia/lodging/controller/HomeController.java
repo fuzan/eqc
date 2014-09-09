@@ -1,5 +1,6 @@
 package com.expedia.lodging.controller;
 
+import java.util.List;
 import java.util.Locale;
 import java.util.Map;
 
@@ -10,6 +11,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import com.expedia.lodging.entity.EQCLocale;
 import com.expedia.lodging.entity.LocaleContent;
 import com.expedia.lodging.entity.Pages;
 import com.expedia.lodging.util.Validation;
@@ -33,7 +35,7 @@ public class HomeController extends BaseController{
 		log.debug("url mapping " + url);
 		
 		if(Validation.nullCheck(localeCode)){
-			localeCode = Locale.US.getDisplayName();
+			localeCode = Locale.US.getLanguage();
 		}
 
 		log.debug("locale id is " + localeCode);
@@ -41,12 +43,16 @@ public class HomeController extends BaseController{
 		Pages p = pages.findPagesByPermalink(url);
 		int localeId = localeService.getLocaleIdbyCode(localeCode);
 		LocaleContent lc = contentService.findByLocaleIdAndPageId(localeId, p.getId());
+		List<EQCLocale> locales = localeService.getLocales();
 		
-		log.debug(" locale content loaded, title " + lc.getTitle() + ", and id :" + lc.getId());
 		
-		model.put("title", lc.getTitle() );
-		model.put("content", lc.getContent());
-
+		if( lc != null ){
+			log.debug(" locale content loaded, title " + lc.getTitle() + ", and id :" + lc.getId());
+		
+			model.put("title", lc.getTitle() );
+			model.put("content", lc.getContent());
+			model.put("locales", locales);
+		}
 		return "/content/home/index";
 	}
 	
