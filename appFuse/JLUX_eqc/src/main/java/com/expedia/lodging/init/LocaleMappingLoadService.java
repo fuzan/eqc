@@ -5,16 +5,20 @@ import org.slf4j.LoggerFactory;
 import org.springframework.context.ApplicationListener;
 import org.springframework.context.event.ContextRefreshedEvent;
 
+import com.expedia.lodging.localCache.LocaleMapCache;
+
+
 public class LocaleMappingLoadService  implements ApplicationListener<ContextRefreshedEvent>{
 
 
 	private Logger log = LoggerFactory.getLogger(this.getClass());
 	
-	
-	
 	public void onApplicationEvent(ContextRefreshedEvent event) {
-		// TODO Auto-generated method stub
-		log.debug(" Init the locale map : " + event.getApplicationContext().getApplicationName());
+		long start = System.currentTimeMillis();
+		log.debug(" Init the locale map begin ");
+		LocaleMapCache.load();
+		long elapse = System.currentTimeMillis() - start; 
+		log.debug(" Init the locale map end, time consuming : " + (elapse) + " ms");
 	}
 
 }

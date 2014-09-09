@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import com.expedia.lodging.entity.EQCLocale;
 import com.expedia.lodging.repository.IEQCLocale;
 import com.expedia.lodging.service.interf.ILocaleService;
+import com.expedia.lodging.util.Validation;
 
 public class LocaleService implements ILocaleService {
 	
@@ -31,6 +32,18 @@ public class LocaleService implements ILocaleService {
 		return localeIdAndCode;
 	}
 	
+	
+	public int getLocaleIdbyCode(String code){
+		EQCLocale loc = null;
+		if ( Validation.notNullCheck(code) ){
+			loc = locale.findByLocaleCode(code);
+			if( loc != null )
+				return loc.getId();
+		} 
+		return -1;
+	}
+	
+	
 	/* (non-Javadoc)
 	 * @see com.expedia.lodging.service.ILocaleService#loadLocaleNameAndCode()
 	 */
@@ -45,5 +58,13 @@ public class LocaleService implements ILocaleService {
 		}
 		return localeNameAndCode;
 	}
+
+
+	public List<EQCLocale> getLocales() {
+		// TODO Auto-generated method stub
+		return locale.findAll();
+	}
+	
+	
 	
 }

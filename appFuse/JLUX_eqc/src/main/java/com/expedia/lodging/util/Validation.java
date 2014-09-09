@@ -3,7 +3,7 @@ package com.expedia.lodging.util;
 public class Validation {
 
 	public static boolean isInteger(String integer){
-		if( integer != null && !"".equals(integer.trim()))
+		if( notNullCheck(integer) )
 			return integer.matches("^\\d+$");
 		return false;
 	}
@@ -15,5 +15,10 @@ public class Validation {
 	}
 	
 	
+	public static boolean nullCheck(String str){
+		if( str == null || "".equals(str.trim()))
+			return true;
+		return false;
+	}
 	
 }

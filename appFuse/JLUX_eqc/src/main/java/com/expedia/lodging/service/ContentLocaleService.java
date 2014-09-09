@@ -8,7 +8,7 @@ import com.expedia.lodging.entity.LocaleContent;
 import com.expedia.lodging.repository.IContent;
 import com.expedia.lodging.service.interf.IContentLocaleService;
 
-public class ContentLocaleServiceImp implements IContentLocaleService {
+public class ContentLocaleService implements IContentLocaleService {
 
 	@Autowired
 	public IContent content;

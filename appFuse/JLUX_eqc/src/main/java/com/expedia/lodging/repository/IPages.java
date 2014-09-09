@@ -3,7 +3,6 @@ package com.expedia.lodging.repository;
 import java.util.List;
 import java.util.Map;
 
-import com.expedia.lodging.entity.LocaleContent;
 import com.expedia.lodging.entity.Pages;
 
 public interface IPages {
@@ -23,5 +22,10 @@ public interface IPages {
 	 */
 	public Map<String,Integer> getPermalinkAndIdMapping();
 	
-	public LocaleContent findById(String id);
+	public Map<String,String> getPermalinkAndTextMapping();
+	
+	
+	public Pages findById(int id);
+	
+	public Pages findByPermalink(String link);
 }

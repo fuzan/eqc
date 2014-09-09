@@ -13,15 +13,11 @@ public class LocaleTest {
 		= new ClassPathXmlApplicationContext("META-INF/app.xml");
 
 	String name = context.getMessage("customer.name", 
-			new Object[] { 28,"http://www.mkyong.com" }, Locale.US);
+			new Object[] { 0,"http://www.expedia.com" }, Locale.US);
 
 	System.out.println("Customer name (English) : " + name);
 
-//	String namechinese = context.getMessage("customer.name", 
-//			new Object[] {28, "http://www.mkyong.com" }, 
-//                                    Locale.SIMPLIFIED_CHINESE);
-//
-//	System.out.println("Customer name (Chinese) : " + namechinese);
+
 	}
 
 }

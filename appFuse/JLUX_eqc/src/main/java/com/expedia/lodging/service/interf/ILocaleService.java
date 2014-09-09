@@ -1,6 +1,9 @@
 package com.expedia.lodging.service.interf;
 
+import java.util.List;
 import java.util.Map;
+
+import com.expedia.lodging.entity.EQCLocale;
 
 public interface ILocaleService {
 
@@ -25,4 +28,14 @@ public interface ILocaleService {
 	 */
 	public abstract Map<String, String> loadLocaleNameAndCode();
 
+	
+	/**
+	 * wrapper function for get the locale Id
+	 * @param code
+	 * @return
+	 */
+	public int getLocaleIdbyCode(String code);
+	
+	
+	public List<EQCLocale> getLocales();
 }
