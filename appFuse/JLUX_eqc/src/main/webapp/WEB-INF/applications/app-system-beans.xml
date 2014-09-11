@@ -100,7 +100,7 @@ http://www.springframework.org/schema/mvc/spring-mvc.xsd">
 	    <mvc:interceptor>
 	        <mvc:mapping path="/content/*"/>
 	        <mvc:exclude-mapping path="/admin/"/>
-	        <bean class="org.springframework.web.servlet.theme.ThemeChangeInterceptor" />
+	        <bean class="com.expedia.lodging.filter.BaseFilter" />
 	    </mvc:interceptor>
 	</mvc:interceptors>
 	

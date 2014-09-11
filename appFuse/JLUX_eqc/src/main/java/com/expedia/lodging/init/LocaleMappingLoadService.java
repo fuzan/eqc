@@ -7,7 +7,8 @@ import org.springframework.context.event.ContextRefreshedEvent;
 
 
 
-public class LocaleMappingLoadService  implements ApplicationListener<ContextRefreshedEvent>{
+
+public class LocaleMappingLoadService implements ApplicationListener<ContextRefreshedEvent>{
 
 
 	private Logger log = LoggerFactory.getLogger(this.getClass());
@@ -15,7 +16,7 @@ public class LocaleMappingLoadService  implements ApplicationListener<ContextRef
 	public void onApplicationEvent(ContextRefreshedEvent event) {
 		long start = System.currentTimeMillis();
 		log.debug(" Init the locale map begin ");
-		//LocaleMapCache.load();
+		
 		long elapse = System.currentTimeMillis() - start; 
 		log.debug(" Init the locale map end, time consuming : " + (elapse) + " ms");
 	}

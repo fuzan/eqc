@@ -5,12 +5,14 @@ import java.util.List;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import com.expedia.lodging.entity.EQCLocale;
 import com.expedia.lodging.repository.IEQCLocale;
 import com.expedia.lodging.service.interf.ILocaleService;
 import com.expedia.lodging.util.Validation;
 
+@Service
 public class LocaleService implements ILocaleService {
 	
 	@Autowired

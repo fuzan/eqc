@@ -11,6 +11,10 @@ tomcat_war=$tomcat_webapp/$app_name.war
 tomcat_lib=/Users/zafu/Documents/tools/apache-tomcat-7.0.55/lib/slf4j-simple-1.7.7.jar
 lib_temp=/Users/zafu/Documents/tools/apache-tomcat-7.0.55/webapps/JLUX_eqc/WEB-INF/lib
 
+jsp_folder=$project_code_base/$app/src/main/webapp/WEB-INF/views/content/home/*.jsp
+tomcat_jsp=$tomcat_webapp/$app_name/WEB-INF/views/content/home
+
+
 if [[ $1 = "--1" ]] 
 then
     # used for copy paste the war, args --1
@@ -40,6 +44,11 @@ then
     # fix a bug for the slf4j
 	cp $tomcat_lib $lib_temp
 	echo "copy slf4j to temp lib !"
+elif [[ $1 = "--5" ]] 
+then
+    # quick change for jsp
+	cp $jsp_folder $tomcat_jsp
+	echo "copy jsps to tomcat jsp folder !"
 else 
     # if no args, prompt below.
     echo "------------------------------------------------------------------------------------------"
@@ -48,5 +57,6 @@ else
     echo " ./task.sh --2 means copy the classes to the tomcat classes folder, if any minion changes."
     echo " ./task.sh --2 --3 means copy the classes to the tomcat classes folder, if any minion changes, and then delete the war, ----- this is deprecated."
 	echo " ./task.sh --4 for bug fixing for slf4j."
+	echo " ./task.sh --5 copy modified jsp."
     echo "------------------------------------------------------------------------------------------"
 fi

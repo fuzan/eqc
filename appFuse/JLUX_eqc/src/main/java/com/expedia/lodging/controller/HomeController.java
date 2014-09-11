@@ -45,7 +45,6 @@ public class HomeController extends BaseController{
 		LocaleContent lc = contentService.findByLocaleIdAndPageId(localeId, p.getId());
 		List<EQCLocale> locales = localeService.getLocales();
 		
-		
 		if( lc != null ){
 			log.debug(" locale content loaded, title " + lc.getTitle() + ", and id :" + lc.getId());
 		

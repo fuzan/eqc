@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.expedia.lodging.localCache.ICache;
 import com.expedia.lodging.service.interf.IContentLocaleService;
 import com.expedia.lodging.service.interf.ILocaleService;
 import com.expedia.lodging.service.interf.IPagesService;
@@ -20,7 +21,9 @@ public abstract class BaseController {
 	@Autowired
 	protected IPagesService pages;
 	
-	
+	@Autowired
+	protected ICache cache;
+
 	/**
 	 * customized error handling
 	 * @param ex

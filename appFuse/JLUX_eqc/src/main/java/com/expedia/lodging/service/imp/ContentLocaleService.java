@@ -3,11 +3,14 @@ package com.expedia.lodging.service.imp;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import com.expedia.lodging.entity.LocaleContent;
 import com.expedia.lodging.repository.IContent;
 import com.expedia.lodging.service.interf.IContentLocaleService;
 
+
+@Service
 public class ContentLocaleService implements IContentLocaleService {
 
 	@Autowired
