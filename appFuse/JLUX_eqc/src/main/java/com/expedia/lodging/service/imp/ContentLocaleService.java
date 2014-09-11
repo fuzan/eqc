@@ -26,7 +26,7 @@ public class ContentLocaleService implements IContentLocaleService {
 		return content.findAll();
 	}
 	
-	public LocaleContent findByLocaleId(int localeID){
+	public LocaleContent findByLocaleId(Integer localeID){
 		try{
 			return content.findByLocaleId(localeID);
 		}catch(NoResultException ex){
@@ -36,7 +36,7 @@ public class ContentLocaleService implements IContentLocaleService {
 	}
 	
 	
-	public LocaleContent findByLocaleIdAndPageId(int localeID,int pageId){
+	public LocaleContent findByLocaleIdAndPageId(int localeID,Integer pageId){
 		try{
 			return content.findByLocaleIdAndPageId(localeID, pageId);
 		}catch(NoResultException ex){

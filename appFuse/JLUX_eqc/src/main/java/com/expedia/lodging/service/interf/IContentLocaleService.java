@@ -9,9 +9,9 @@ public interface IContentLocaleService {
 	
 	public List<LocaleContent> findAll();
 	
-	public LocaleContent findByLocaleId(int localeID);
+	public LocaleContent findByLocaleId(Integer localeID);
 	
 	
-	public LocaleContent findByLocaleIdAndPageId(int localeID,int pageId);
+	public LocaleContent findByLocaleIdAndPageId(int localeID,Integer pageId);
 	
 }

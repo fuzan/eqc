@@ -41,7 +41,7 @@ public class HomeController extends BaseController{
 		log.debug("locale id is " + localeCode);
 		
 		Pages p = pages.findPagesByPermalink(url);
-		int localeId = localeService.getLocaleIdbyCode(localeCode);
+		Integer localeId = cache.getlocaleId(localeCode);
 		LocaleContent lc = contentService.findByLocaleIdAndPageId(localeId, p.getId());
 		List<EQCLocale> locales = localeService.getLocales();
 		
@@ -54,5 +54,6 @@ public class HomeController extends BaseController{
 		}
 		return "/content/home/index";
 	}
+	
 	
 }

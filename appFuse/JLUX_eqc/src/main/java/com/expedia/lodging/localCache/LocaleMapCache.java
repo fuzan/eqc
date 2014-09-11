@@ -24,10 +24,7 @@ public class LocaleMapCache implements ICache {
 	@Autowired
 	public IEQCLocale locale;
 	
-	
 	private Map<String, Integer> localeCodeAndId = new HashMap<String, Integer>();
-
-	boolean loadFlag_localeCodeAndId = false;
 
 	private List<EQCLocale> locales = new LinkedList<EQCLocale>();
 
@@ -41,17 +38,6 @@ public class LocaleMapCache implements ICache {
 				&& localeCodeAndId.containsKey(localeCode))
 			localeCodeAndId.get(localeCode);
 		return null;
-	}
-
-	/* (non-Javadoc)
-	 * @see com.expedia.lodging.localCache.ICache#loadLocaleAndCode(java.util.Map)
-	 */
-	public Map<String, Integer> loadLocaleAndCode(Map<String, Integer> mapData) {
-		if (!loadFlag_localeCodeAndId) {
-			localeCodeAndId = mapData;
-		}
-		loadFlag_localeCodeAndId = true;
-		return localeCodeAndId;
 	}
 
 	/* (non-Javadoc)
@@ -72,8 +58,17 @@ public class LocaleMapCache implements ICache {
 		if( locales.size() == 0 ){
 			List<EQCLocale> list = locale.findAll();
 			loadLocales(list);
+			// Load to Map
+			for(EQCLocale temp_EQClocale : list){
+				localeCodeAndId.put(temp_EQClocale.getCode(), temp_EQClocale.getId());
+			}
+
 		}
 	
+	}
+	
+	public List<EQCLocale> getLocaleCache(){
+		return this.locales;
 	}
 
 }
