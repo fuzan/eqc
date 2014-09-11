@@ -4,6 +4,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import javax.persistence.NoResultException;
+
 import com.expedia.lodging.entity.Pages;
 import com.expedia.lodging.repository.IPages;
 
@@ -25,7 +27,7 @@ public class PagesImp extends RepositoryBase implements IPages{
 		return map;
 	}
 
-	public Pages findById(int id) {
+	public Pages findById(int id) throws NoResultException{
 		// TODO Auto-generated method stub
 		return entityManager.createQuery("from Pages p where p.id = ? ",Pages.class).setParameter(1, id).getSingleResult();
 	}
@@ -43,7 +45,7 @@ public class PagesImp extends RepositoryBase implements IPages{
 		return map;
 	}
 
-	public Pages findByPermalink(String link) {
+	public Pages findByPermalink(String link) throws NoResultException{
 		// TODO Auto-generated method stub
 		return entityManager.createQuery("from Pages p where p.permalink = ? ",Pages.class).setParameter(1, link).getSingleResult();
 	}

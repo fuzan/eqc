@@ -3,6 +3,8 @@ package com.expedia.lodging.repository;
 import java.util.List;
 import java.util.Map;
 
+import javax.persistence.NoResultException;
+
 import com.expedia.lodging.entity.Pages;
 
 public interface IPages {
@@ -25,7 +27,7 @@ public interface IPages {
 	public Map<String,String> getPermalinkAndTextMapping();
 	
 	
-	public Pages findById(int id);
+	public Pages findById(int id) throws NoResultException;
 	
-	public Pages findByPermalink(String link);
+	public Pages findByPermalink(String link) throws NoResultException;
 }

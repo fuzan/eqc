@@ -4,6 +4,10 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import javax.persistence.NoResultException;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -17,6 +21,10 @@ public class LocaleService implements ILocaleService {
 	
 	@Autowired
 	public IEQCLocale locale;
+	
+	
+	private Logger log =  LoggerFactory.getLogger(this.getClass());
+	
 	
 	/* (non-Javadoc)
 	 * @see com.expedia.lodging.service.ILocaleService#loadLocaleIdAndCode()
@@ -38,7 +46,11 @@ public class LocaleService implements ILocaleService {
 	public int getLocaleIdbyCode(String code){
 		EQCLocale loc = null;
 		if ( Validation.notNullCheck(code) ){
-			loc = locale.findByLocaleCode(code);
+			try{
+				loc = locale.findByLocaleCode(code);
+			}catch(NoResultException ex){
+				log.debug(ex.getMessage());
+			}
 			if( loc != null )
 				return loc.getId();
 		} 
@@ -66,7 +78,4 @@ public class LocaleService implements ILocaleService {
 		// TODO Auto-generated method stub
 		return locale.findAll();
 	}
-	
-	
-	
 }
