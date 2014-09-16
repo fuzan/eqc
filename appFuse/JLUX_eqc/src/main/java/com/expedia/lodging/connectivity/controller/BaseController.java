@@ -4,9 +4,9 @@ package com.expedia.lodging.connectivity.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import com.expedia.lodging.connectivity.localCache.ICache;
-import com.expedia.lodging.connectivity.service.interf.IContentAndNavLinkLocaleService;
-import com.expedia.lodging.connectivity.service.interf.ILocaleService;
-import com.expedia.lodging.connectivity.service.interf.IPagesService;
+import com.expedia.lodging.connectivity.service.IContentAndNavLinkLocaleService;
+import com.expedia.lodging.connectivity.service.ILocaleService;
+import com.expedia.lodging.connectivity.service.IPagesService;
 
 public abstract class BaseController {
 	
@@ -19,8 +19,6 @@ public abstract class BaseController {
 	
 	@Autowired
 	protected IPagesService pages;
-	
-	
 	
 	@Autowired
 	protected ICache cache;

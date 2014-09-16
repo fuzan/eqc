@@ -45,7 +45,7 @@ public class PagesImp extends RepositoryBase implements IPages{
 		return map;
 	}
 
-	public Pages findByPermalink(String link) throws NoResultException{
+	public Pages findPagesByPermalink(String link) throws NoResultException{
 		// TODO Auto-generated method stub
 		return entityManager.createQuery("from Pages p where p.permalink = ? ",Pages.class).setParameter(1, link).getSingleResult();
 	}

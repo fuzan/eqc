@@ -13,58 +13,32 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import com.expedia.lodging.connectivity.entity.Pages;
 import com.expedia.lodging.connectivity.repository.IPages;
-import com.expedia.lodging.connectivity.service.interf.IPagesService;
-
-
+import com.expedia.lodging.connectivity.service.IPagesService;
 
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration({"classpath:app-test.xml"})
+@ContextConfiguration({ "classpath:app-test.xml" })
 public class PagesServiceTest {
 
-	
-	
-	 @Autowired
-	 private IPages pages;
+	@Autowired
+	private IPages pages;
 
-	 @Autowired
-	 private IPagesService service;
+	@Autowired
+	private IPagesService service;
 
-	    @Test
-	    public void testSaveForm() {
-	   
-	    	Pages p = null;
-	        when(pages.findByPermalink("tt")).thenAnswer(new Answer<Pages>() {
-	                    
-	                    public Pages answer(InvocationOnMock invocation) throws Throwable {
-	                        Pages p = new Pages();
-	                        p.setId(1);
-	                        return p;
-	                    }
-	                });
+	@Test
+	public void testFindPagesByPermalink() {
+		Pages p = null;
+		when(pages.findPagesByPermalink("tt")).thenAnswer(new Answer<Pages>() {
+			public Pages answer(InvocationOnMock invocation) throws Throwable {
+				Pages p = new Pages();
+				p.setId(1);
+				return p;
+			}
+		});
 
-	        assertNull(p);
-
-	        p = service.findPagesByPermalink("tt");
-	  
-	        assertNotNull(p.getId());
-	        assertTrue(p.getId() > 0);
-
-	    }
-	
-	
-//	@Test
-//	public void testPagesServiceIPages() {
-//		fail("Not yet implemented");
-//	}
-//
-//	@Test
-//	public void testPagesService() {
-//		fail("Not yet implemented");
-//	}
-//
-//	@Test
-//	public void testFindPagesByPermalink() {
-//		fail("Not yet implemented");
-//	}
-
+		assertNull(p);
+		p = service.findPagesByPermalink("tt");
+		assertNotNull(p.getId());
+		assertTrue(p.getId() > 0);
+	}
 }

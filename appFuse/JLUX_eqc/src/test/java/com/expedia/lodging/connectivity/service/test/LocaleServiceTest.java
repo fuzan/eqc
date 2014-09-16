@@ -14,7 +14,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import com.expedia.lodging.connectivity.entity.EQCLocale;
 import com.expedia.lodging.connectivity.repository.IEQCLocale;
-import com.expedia.lodging.connectivity.service.interf.ILocaleService;
+import com.expedia.lodging.connectivity.service.ILocaleService;
 
 
 @RunWith(SpringJUnit4ClassRunner.class)

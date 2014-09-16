@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service;
 
 import com.expedia.lodging.connectivity.entity.Pages;
 import com.expedia.lodging.connectivity.repository.IPages;
-import com.expedia.lodging.connectivity.service.interf.IPagesService;
+import com.expedia.lodging.connectivity.service.IPagesService;
 import com.expedia.lodging.connectivity.util.Validation;
 
 
@@ -27,7 +27,7 @@ public class PagesService implements IPagesService {
 	public Pages findPagesByPermalink(String link) {
 		if(Validation.notNullCheck(link)){
 			try{
-				return pages.findByPermalink(link);
+				return pages.findPagesByPermalink(link);
 			}catch(NoResultException ex){
 				log.debug(ex.getMessage());
 				return null;

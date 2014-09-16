@@ -29,5 +29,5 @@ public interface IPages {
 	
 	public Pages findById(int id) throws NoResultException;
 	
-	public Pages findByPermalink(String link) throws NoResultException;
+	public Pages findPagesByPermalink(String link) throws NoResultException;
 }

@@ -12,7 +12,7 @@ import org.springframework.stereotype.Service;
 import com.expedia.lodging.connectivity.entity.LocaleContent;
 import com.expedia.lodging.connectivity.entity.LocaleNavLink;
 import com.expedia.lodging.connectivity.repository.IContent;
-import com.expedia.lodging.connectivity.service.interf.IContentAndNavLinkLocaleService;
+import com.expedia.lodging.connectivity.service.IContentAndNavLinkLocaleService;
 
 
 @Service

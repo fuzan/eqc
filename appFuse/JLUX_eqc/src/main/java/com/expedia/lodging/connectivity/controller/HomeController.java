@@ -41,19 +41,22 @@ public class HomeController extends BaseController{
 		Pages p = pages.findPagesByPermalink(url);
 		Integer localeId = cache.getlocaleId(localeCode);
 		
-		if(p == null && localeId == null ){
+		// p equals Null means user passes an invilad url
+		// localeId cannot be Null, because we handle that from the cache.
+		if( p == null ){
 			return view;
 		}
-		
 		
 		LocaleContent lc = contentService.findByLocaleIdAndPageId(localeId, p.getId());
 		List<EQCLocale> locales = localeService.getLocales();
 		
+		
+		
 		if( lc != null ){
 			log.debug(" locale content loaded, title " + lc.getTitle() + ", and id :" + lc.getId());
-			model.put("title", lc.getTitle() );
-			model.put("content", lc.getContent());
-			model.put("locales", locales);
+			model.put("title", lc.getTitle() );// title show on the top
+			model.put("content", lc.getContent());// content show in the body
+			model.put("locales", locales); // the locale select drop down menu.
 		}
 		return view;
 	}

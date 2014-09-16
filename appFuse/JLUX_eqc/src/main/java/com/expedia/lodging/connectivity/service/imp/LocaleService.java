@@ -13,7 +13,7 @@ import org.springframework.stereotype.Service;
 
 import com.expedia.lodging.connectivity.entity.EQCLocale;
 import com.expedia.lodging.connectivity.repository.IEQCLocale;
-import com.expedia.lodging.connectivity.service.interf.ILocaleService;
+import com.expedia.lodging.connectivity.service.ILocaleService;
 import com.expedia.lodging.connectivity.util.Validation;
 
 @Service

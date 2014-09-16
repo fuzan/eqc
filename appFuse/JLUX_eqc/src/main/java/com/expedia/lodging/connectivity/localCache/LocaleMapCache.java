@@ -3,6 +3,7 @@ package com.expedia.lodging.connectivity.localCache;
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Locale;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -30,13 +31,25 @@ public class LocaleMapCache implements ICache {
 
 	boolean loadFlag_locales = false;
 
-	/* (non-Javadoc)
+	
+	/* 
+	 * three cases:
+	 *     1 null , return null
+	 *     2 not null but invalid code
+	 *       return null
+	 *     3 not null and valid
+	 *       return localeID
+	 * 
+	 * (non-Javadoc)
 	 * @see com.expedia.lodging.localCache.ICache#getlocaleId(java.lang.String)
 	 */
 	public Integer getlocaleId(String localeCode) {
-		if (Validation.notNullCheck(localeCode)
-				&& localeCodeAndId.containsKey(localeCode))
-			return localeCodeAndId.get(localeCode);
+		if (Validation.notNullCheck(localeCode)){
+			if( localeCodeAndId.containsKey(localeCode) )
+				return localeCodeAndId.get(localeCode);
+			else
+				return localeCodeAndId.get(Locale.US.getLanguage());
+		}
 		return null;
 	}
 
