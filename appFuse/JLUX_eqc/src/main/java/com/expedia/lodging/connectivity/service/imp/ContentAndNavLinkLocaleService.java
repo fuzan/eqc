@@ -48,9 +48,9 @@ public class ContentAndNavLinkLocaleService implements IContentAndNavLinkLocaleS
 	}
 
 
-	public List<LocaleNavLink> findAllNavLinkText() {
+	public List<LocaleNavLink> findAllNavLinkTextByLocaleId(Integer localeId) {
 		// TODO Auto-generated method stub
-		return null;
+		return content.findAllNavLinkTextByLocaleId(localeId);
 	}
 
 }

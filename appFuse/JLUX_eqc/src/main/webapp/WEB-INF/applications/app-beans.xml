@@ -7,18 +7,10 @@ http://www.springframework.org/schema/beans
 
 http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
 
-
-	
-	<bean id="appStartedEventHandler" 
-         class="com.expedia.lodging.init.LocaleMappingLoadService"/>
-	
-	
-	
-	<bean id="contentRepo" class="com.expedia.lodging.repository.imp.ContentImp"></bean>
-	<bean id="EQCLocaleRepo" class="com.expedia.lodging.repository.imp.EQCLocaleImp"></bean>
-	<bean id="pageRepo" class="com.expedia.lodging.repository.imp.PagesImp"></bean>
-	
-	
-	<bean id="NavRepo" class="com.expedia.lodging.repository.imp.LocaleNavLinkImp"></bean>
+	<bean id="appStartedEventHandler" class="com.expedia.lodging.connectivity.init.LocaleMappingLoadService"/>
+	<bean id="contentRepo" class="com.expedia.lodging.connectivity.repository.imp.ContentImp"></bean>
+	<bean id="EQCLocaleRepo" class="com.expedia.lodging.connectivity.repository.imp.EQCLocaleImp"></bean>
+	<bean id="pageRepo" class="com.expedia.lodging.connectivity.repository.imp.PagesImp"></bean>
+	<bean id="NavRepo" class="com.expedia.lodging.connectivity.repository.imp.LocaleNavLinkImp"></bean>
 	
 </beans>

@@ -23,4 +23,6 @@ public abstract class BaseController {
 	@Autowired
 	protected ICache cache;
 	
+	
+	
 }

@@ -17,7 +17,7 @@ public class EQCLocaleImp extends RepositoryBase implements IEQCLocale{
 
 	public EQCLocale findByLocaleCode(String code) throws NoResultException{
 		// TODO Auto-generated method stub
-		return entityManager.createQuery("from EQCLocale  el where el.code = ?",EQCLocale.class).setParameter(1, code).getSingleResult();
+		return entityManager.createQuery("from EQCLocale el where el.code = ?",EQCLocale.class).setParameter(1, code).getSingleResult();
 	}
 
 }

@@ -24,6 +24,6 @@ public interface IContentAndNavLinkLocaleService {
 	 * load nav link text
 	 * @return
 	 */
-	public List<LocaleNavLink> findAllNavLinkText(); 
+	public List<LocaleNavLink> findAllNavLinkTextByLocaleId(Integer localeId); 
 	
 }

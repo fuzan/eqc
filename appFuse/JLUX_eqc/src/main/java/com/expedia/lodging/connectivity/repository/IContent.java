@@ -20,4 +20,7 @@ public interface IContent {
 		
 		public LocaleNavLink findNavLinkByLocaleIdAndPageId(Integer localeId,Integer pageId) throws NoResultException;
 		
+		
+		public List<LocaleNavLink> findAllNavLinkTextByLocaleId(Integer localeId);
+		
 }

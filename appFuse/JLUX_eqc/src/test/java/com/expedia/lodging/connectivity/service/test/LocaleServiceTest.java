@@ -2,6 +2,7 @@ package com.expedia.lodging.connectivity.service.test;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertNull;
 import static org.mockito.Mockito.when;
 
 import org.junit.Test;
@@ -42,6 +43,10 @@ public class LocaleServiceTest {
         EQCLocale l = service.getLocalebyCode("en");
         assertNotNull(l.getId());
         assertEquals(l.getName(),"");
+        
+        
+        EQCLocale l_fr = service.getLocalebyCode("fr");
+        assertNull(l_fr);        
     }
 
 }

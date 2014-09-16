@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import com.expedia.lodging.connectivity.entity.EQCLocale;
 import com.expedia.lodging.connectivity.entity.LocaleContent;
+import com.expedia.lodging.connectivity.entity.LocaleNavLink;
 import com.expedia.lodging.connectivity.entity.Pages;
 import com.expedia.lodging.connectivity.util.Validation;
 
@@ -50,13 +51,14 @@ public class HomeController extends BaseController{
 		LocaleContent lc = contentService.findByLocaleIdAndPageId(localeId, p.getId());
 		List<EQCLocale> locales = localeService.getLocales();
 		
-		
+		List<LocaleNavLink> navs = contentService.findAllNavLinkTextByLocaleId(localeId);
 		
 		if( lc != null ){
 			log.debug(" locale content loaded, title " + lc.getTitle() + ", and id :" + lc.getId());
 			model.put("title", lc.getTitle() );// title show on the top
 			model.put("content", lc.getContent());// content show in the body
 			model.put("locales", locales); // the locale select drop down menu.
+			model.put("leftMenu", navs);
 		}
 		return view;
 	}

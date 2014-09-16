@@ -8,7 +8,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "localized_nav_texts")
+@Table(name = "localized_nav_link_texts")
 public class LocaleNavLink {
 
 	@Id

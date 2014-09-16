@@ -28,11 +28,14 @@ public class ContentImp extends RepositoryBase implements IContent{
 		return entityManager.createQuery("from LocaleNavLink",LocaleNavLink.class).getResultList();
 	}
 
-	public LocaleNavLink findNavLinkByLocaleIdAndPageId(Integer localeId,
-			Integer pageId) throws NoResultException {
+	public LocaleNavLink findNavLinkByLocaleIdAndPageId(Integer localeId, Integer pageId) throws NoResultException {
 		// TODO Auto-generated method stub
 		return null;
 	}
-	
+
+	public List<LocaleNavLink> findAllNavLinkTextByLocaleId(Integer localeId) {
+		// TODO Auto-generated method stub
+		return entityManager.createQuery("from LocaleNavLink ll where ll.locale_id = ? ",LocaleNavLink.class).setParameter(1, localeId).getResultList();
+	}
 	
 }

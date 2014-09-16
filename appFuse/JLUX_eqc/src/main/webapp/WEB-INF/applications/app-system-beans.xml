@@ -34,9 +34,18 @@ http://www.springframework.org/schema/mvc/spring-mvc.xsd">
 
 	<context:component-scan base-package="com.expedia.lodging" />
 
+	<!-- 
+	
+	remember to change this package scan location after any code refactor. 
+	<property name="packagesToScan" value="com.expedia.lodging.connectivity.entity"/>
+	
+	 -->
+
 	<context:annotation-config/>
 
 	<tx:annotation-driven/>
+	
+	<mvc:resources mapping="/resources/**" location="/WEB-INF/views/static/" />
 	
 	<bean
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
@@ -61,19 +70,8 @@ http://www.springframework.org/schema/mvc/spring-mvc.xsd">
         <property name="dataSource" ref="dbDataSource"/>
         <property name="jpaVendorAdapter" ref="jpaVendorAdapter"/>
 		<property name="jpaDialect" ref="jpaDialect" />
-        <property name="packagesToScan" value="com.expedia.lodging.entity"/>
+        <property name="packagesToScan" value="com.expedia.lodging.connectivity.entity"/>
         <property name="persistenceUnitName" value="EQCPersistenceUnit"/>
-        <!-- property name="jpaProperties">
-            <value>
-                hibernate.cache.use_second_level_cache = true
-                hibernate.cache.region.factory_class = org.hibernate.cache.ehcache.EhCacheRegionFactory
-                hibernate.cache.use_query_cache = true
-                hibernate.generate_statistics = true
-            </value>
-            
-            not decide yet, if using Memcached, this is optional
-            
-        </property -->
     </bean>
 
 	<bean id="jpaVendorAdapter"
@@ -95,7 +93,7 @@ http://www.springframework.org/schema/mvc/spring-mvc.xsd">
 	    <mvc:interceptor>
 	        <mvc:mapping path="/content/*"/>
 	        <mvc:exclude-mapping path="/admin/"/>
-	        <bean class="com.expedia.lodging.filter.BaseFilter" />
+	        <bean class="com.expedia.lodging.connectivity.filter.BaseFilter" />
 	    </mvc:interceptor>
 	</mvc:interceptors>
 	
