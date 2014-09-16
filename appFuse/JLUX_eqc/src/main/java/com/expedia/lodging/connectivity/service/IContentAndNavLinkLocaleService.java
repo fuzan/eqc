@@ -1,4 +1,4 @@
-package com.expedia.lodging.connectivity.service.interf;
+package com.expedia.lodging.connectivity.service;
 
 import java.util.List;
 
