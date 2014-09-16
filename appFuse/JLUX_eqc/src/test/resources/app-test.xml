@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans 
+       http://www.springframework.org/schema/beans/spring-beans-3.2.xsd">
+
+    <bean id="daoMock" class="org.mockito.Mockito" factory-method="mock">
+        <constructor-arg value="com.expedia.lodging.connectivity.repository.IPages"/>
+    </bean>
+
+    <bean id="sampleService" class="com.expedia.lodging.connectivity.service.imp.PagesService">
+    </bean>
+
+
+	<bean id="localeMock" class="org.mockito.Mockito" factory-method="mock">
+        <constructor-arg value="com.expedia.lodging.connectivity.repository.IEQCLocale"/>
+    </bean>
+
+    <bean id="localeService" class="com.expedia.lodging.connectivity.service.imp.LocaleService">
+    </bean>
+
+</beans>

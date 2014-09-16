@@ -50,64 +50,64 @@
 -->
    <ul>
       <li class="current-parent-link"> 
-         <a href="/content/home">Connectivity Solutions Home</a>
+         <a href="/JLUX_eqc/content/home">Connectivity Solutions Home ${tomcat.source}</a>
       </li>
       <li class="parent-link"> 
-         <a href="/content/connectivity">About Connectivity</a>
+         <a href="/JLUX_eqc/content/connectivity">About Connectivity</a>
       </li>
       <li class="parent-link"> 
-         <a href="/content/eqc-home">Expedia QuickConnect®</a>
+         <a href="/JLUX_eqc/content/eqc-home">Expedia QuickConnect®</a>
       </li>
       <li class="child-link"> 
-         <a href="/content/eqc-system-providers">System Providers</a>
+         <a href="/JLUX_eqc/content/eqc-system-providers">System Providers</a>
       </li>
       <li class="child-link"> 
-         <a href="/content/eqc-preferred-program">EQC Preferred Program</a>
+         <a href="/JLUX_eqc/content/eqc-preferred-program">EQC Preferred Program</a>
       </li>
       <li class="child-link"> 
-         <a href="/content/eqc-how-it-works">How Does It Work</a>
+         <a href="/JLUX_eqc/content/eqc-how-it-works">How Does It Work</a>
       </li>
       <li class="child-link"> 
-         <a href="/content/eqc-get-started">How to Get Started</a>
+         <a href="/JLUX_eqc/content/eqc-get-started">How to Get Started</a>
       </li>
       <li class="child-link"> 
-         <a href="/content/eqc-best-practices">Best Practices</a>
+         <a href="/JLUX_eqc/content/eqc-best-practices">Best Practices</a>
       </li>
       <li class="child-link"> 
-         <a href="/content/eqc-faq">FAQ</a>
+         <a href="/JLUX_eqc/content/eqc-faq">FAQ</a>
       </li>
       <li class="child-link"> 
-         <a href="/content/eqc-contact">Contact Us</a>
+         <a href="/JLUX_eqc/content/eqc-contact">Contact Us</a>
       </li>
       <li class="parent-link"> 
-         <a href="/content/hotwire-quickconnect-home">Hotwire QuickConnect</a>
+         <a href="/JLUX_eqc/content/hotwire-quickconnect-home">Hotwire QuickConnect</a>
       </li>
       <li class="child-link"> 
-         <a href="/content/hotwire-system-providers">System Providers</a>
+         <a href="/JLUX_eqc/content/hotwire-system-providers">System Providers</a>
       </li>
       <li class="child-link"> 
-         <a href="/content/hotwire-what">What can it do for me?</a>
+         <a href="/JLUX_eqc/content/hotwire-what">What can it do for me?</a>
       </li>
       <li class="child-link"> 
-         <a href="/content/hotwire-how-to-start">How to get started</a>
+         <a href="/JLUX_eqc/content/hotwire-how-to-start">How to get started</a>
       </li>
       <li class="child-link"> 
-         <a href="/content/hotwire-general-faq">FAQ</a>
+         <a href="/JLUX_eqc/content/hotwire-general-faq">FAQ</a>
       </li>
       <li class="child-link"> 
-         <a href="/content/hotwire-contact-us">Contact Us</a>
+         <a href="/JLUX_eqc/content/hotwire-contact-us">Contact Us</a>
       </li>
       <li class="parent-link"> 
-         <a href="/content/vc-home">VenereConnect™</a>
+         <a href="/JLUX_eqc/content/vc-home">VenereConnect™</a>
       </li>
       <li class="parent-link"> 
-         <a href="/content/termsandconditions">Connectivity Terms and Conditions</a>
+         <a href="/JLUX_eqc/content/termsandconditions">Connectivity Terms and Conditions</a>
       </li>
       <li class="parent-link"> 
-         <a href="/content/expedia">About Expedia</a>
+         <a href="/JLUX_eqc/content/expedia">About Expedia</a>
       </li>
       <li class="parent-link"> 
-         <a href="/content/contact">Contact Us</a>
+         <a href="/JLUX_eqc/content/contact">Contact Us</a>
       </li>
       <li class="parent-link">
          <a href="/login">Developer Area</a>
@@ -132,84 +132,13 @@
                         <span id="select_box_label" class="select-box-label">English UK</span>
                         <span class="select-box-arrow"></span>
                         <ul id="lang_list" class="select-box-dropdown-menu foot-select-box-options">
-                                <li>
-                                    <a langid="1033" langlocalecode="en-US">English US</a>
-                                </li>
-                                <li class="select-box-selected">
-                                    <a langid="2057" langlocalecode="en-GB">English UK</a>
-                                </li>
-                                <li>
-                                    <a langid="3082" langlocalecode="es-ES">Español</a>
-                                </li>
-                                <li>
-                                    <a langid="1040" langlocalecode="it-IT">Italiano</a>
-                                </li>
-                                <li>
-                                    <a langid="1036" langlocalecode="fr-FR">Français</a>
-                                </li>
-                                <li>
-                                    <a langid="1031" langlocalecode="de-DE">Deutsch</a>
-                                </li>
-                                <li>
-                                    <a langid="1041" langlocalecode="ja-JP">???</a>
-                                </li>
-                                <li>
-                                    <a langid="2052" langlocalecode="zh-CN">??</a>
-                                </li>
-                                <li>
-                                    <a langid="1028" langlocalecode="zh-TW">?? (??)</a>
-                                </li>
-                                <li>
-                                    <a langid="1043" langlocalecode="nl-NL">Nederlands</a>
-                                </li>
-                                <li>
-                                    <a langid="1053" langlocalecode="sv-SE">Svenska</a>
-                                </li>
-                                <li>
-                                    <a langid="1044" langlocalecode="nb-NO">norsk, bokmål (Norge)</a>
-                                </li>
-                                <li>
-                                    <a langid="1055" langlocalecode="tr-TR">Türkçe</a>
-                                </li>
-                                <li>
-                                    <a langid="2070" langlocalecode="pt-PT">Portuguese (Portugal)</a>
-                                </li>
-                                <li>
-                                    <a langid="1046" langlocalecode="pt-BR">Portuguese (Brazilian)</a>
-                                </li>
-                                <li>
-                                    <a langid="1030" langlocalecode="da-DK">Dansk</a>
-                                </li>
-                                <li>
-                                    <a langid="1042" langlocalecode="ko-KR">???</a>
-                                </li>
-                                <li>
-                                    <a langid="1045" langlocalecode="pl-PL">polski</a>
-                                </li>
-                                <li>
-                                    <a langid="1032" langlocalecode="el-GR">????????</a>
-                                </li>
-                                <li>
-                                    <a langid="1049" langlocalecode="ru-RU">???????</a>
-                                </li>
-                                <li>
-                                    <a langid="1066" langlocalecode="vi-VN">Tiê´ng Viê?t</a>
-                                </li>
-                                <li>
-                                    <a langid="1029" langlocalecode="cs-CZ">Ceština</a>
-                                </li>
-                                <li>
-                                    <a langid="1054" langlocalecode="th-TH">???????</a>
-                                </li>
-                                <li>
-                                    <a langid="1038" langlocalecode="hu-HU">magyar</a>
-                                </li>
-                                <li>
-                                    <a langid="1035" langlocalecode="fi-FI">suomi</a>
-                                </li>
-                                <li>
-                                    <a langid="1050" langlocalecode="hr-HR">hrvatski</a>
-                                </li>
+                        		<c:forEach var="entry" items="${locales}">
+  									
+  									<li>
+                                    	<a langid="${entry.lang_id}" langlocalecode="${entry.code}"><c:out value="${entry.name}"></c:out></a>
+                                	</li>
+  									
+								</c:forEach>
                         </ul>
                     </div>
                 </div>
@@ -237,64 +166,64 @@
 
    <ul>
       <li class="current-parent-link"> 
-         <a href="/content/home">Connectivity Solutions Home</a>
+         <a href="/JLUX_eqc/content/home">Connectivity Solutions Home</a>
       </li>
       <li class="parent-link"> 
-         <a href="/content/connectivity">About Connectivity</a>
+         <a href="/JLUX_eqc/content/connectivity">About Connectivity</a>
       </li>
       <li class="parent-link"> 
-         <a href="/content/eqc-home">Expedia QuickConnect &reg;</a>
+         <a href="/JLUX_eqc/content/eqc-home">Expedia QuickConnect &reg;</a>
       </li>
       <li class="child-link"> 
-         <a href="/content/eqc-system-providers">System Providers</a>
+         <a href="/JLUX_eqc/content/eqc-system-providers">System Providers</a>
       </li>
       <li class="child-link"> 
-         <a href="/content/eqc-preferred-program">EQC Preferred Program</a>
+         <a href="/JLUX_eqc/content/eqc-preferred-program">EQC Preferred Program</a>
       </li>
       <li class="child-link"> 
-         <a href="/content/eqc-how-it-works">How Does It Work</a>
+         <a href="/JLUX_eqc/content/eqc-how-it-works">How Does It Work</a>
       </li>
       <li class="child-link"> 
-         <a href="/content/eqc-get-started">How to Get Started</a>
+         <a href="/JLUX_eqc/content/eqc-get-started">How to Get Started</a>
       </li>
       <li class="child-link"> 
-         <a href="/content/eqc-best-practices">Best Practices</a>
+         <a href="/JLUX_eqc/content/eqc-best-practices">Best Practices</a>
       </li>
       <li class="child-link"> 
-         <a href="/content/eqc-faq">FAQ</a>
+         <a href="/JLUX_eqc/content/eqc-faq">FAQ</a>
       </li>
       <li class="child-link"> 
-         <a href="/content/eqc-contact">Contact Us</a>
+         <a href="/JLUX_eqc/content/eqc-contact">Contact Us</a>
       </li>
       <li class="parent-link"> 
-         <a href="/content/hotwire-quickconnect-home">Hotwire QuickConnect</a>
+         <a href="/JLUX_eqc/content/hotwire-quickconnect-home">Hotwire QuickConnect</a>
       </li>
       <li class="child-link"> 
-         <a href="/content/hotwire-system-providers">System Providers</a>
+         <a href="/JLUX_eqc/content/hotwire-system-providers">System Providers</a>
       </li>
       <li class="child-link"> 
-         <a href="/content/hotwire-what">What can it do for me?</a>
+         <a href="/JLUX_eqc/content/hotwire-what">What can it do for me?</a>
       </li>
       <li class="child-link"> 
-         <a href="/content/hotwire-how-to-start">How to get started</a>
+         <a href="/JLUX_eqc/content/hotwire-how-to-start">How to get started</a>
       </li>
       <li class="child-link"> 
-         <a href="/content/hotwire-general-faq">FAQ</a>
+         <a href="/JLUX_eqc/content/hotwire-general-faq">FAQ</a>
       </li>
       <li class="child-link"> 
-         <a href="/content/hotwire-contact-us">Contact Us</a>
+         <a href="/JLUX_eqc/content/hotwire-contact-us">Contact Us</a>
       </li>
       <li class="parent-link"> 
-         <a href="/content/vc-home">VenereConnect &reg;</a>
+         <a href="/JLUX_eqc/content/vc-home">VenereConnect &reg;</a>
       </li>
       <li class="parent-link"> 
-         <a href="/content/termsandconditions">Connectivity Terms and Conditions</a>
+         <a href="/JLUX_eqc/content/termsandconditions">Connectivity Terms and Conditions</a>
       </li>
       <li class="parent-link"> 
-         <a href="/content/expedia">About Expedia</a>
+         <a href="/JLUX_eqc/content/expedia">About Expedia</a>
       </li>
       <li class="parent-link"> 
-         <a href="/content/contact">Contact Us</a>
+         <a href="/JLUX_eqc/content/contact">Contact Us</a>
       </li>
       <li class="parent-link">
          <a href="/login">Developer Area</a>
@@ -303,11 +232,21 @@
 
 
                   </aside>
+                  
+                  
                   <section class="col margin-set" id="main-content" role="main">
   
+  
+  				${content}
+  
+  
+               	<!-- 
                	
+               	old one 
+               	
+               	-->
 
-   <p>
+   <!--p>
       Expedia's lodging connectivity solutions offer hotel partners the opportunity to link directly to Expedia - all with the goal of making it easier to connect to Expedia's global marketplace.
    </p>
    <p>
@@ -349,7 +288,7 @@
       Learn more about how Expedia QuickConnect&reg; can facilitate your revenue management strategy by quickly and simply automating the process of working with Expedia Inc.
    </p>
    <p>
-      About Connectivity: <a href="/content/connectivity/"><span class="m-info">More info</span></a>
+      About Connectivity: <a href="/JLUX_eqc/content/connectivity/"><span class="m-info">More info</span></a>
    </p>
    <hr>
    <h2>
@@ -366,7 +305,7 @@
       <p>
          <a href="/login?site_id=3"><img alt="Logo_venereconnect_button" class="vc-dev-image-button" src="http://www.exuxtravel.com/EPC/eqc/assets/img/logo_venereconnect_button.gif"></a>
       </p>
-   </div>                  	
+   </div-->                  	
                  
                   
                  
@@ -396,5 +335,6 @@
          </div>
       </div>
       <script>$LAB.runQueue();</script>
+      <script src="https://www.expediapartnercentral.com.lisqa7.sb.karmalab.net/Scripts/OnCue.js?v=49.0.5365.32264" type="text/javascript"></script> 
    </body>
 </html>
