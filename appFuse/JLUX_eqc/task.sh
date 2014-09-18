@@ -3,13 +3,24 @@
 # be aware of changing the owner and execution level.
 app=JLUX_eqc
 app_name=$app
-tomcat_webapp=/Users/zafu/Documents/tools/apache-tomcat-7.0.55/webapps
-project_code_base=/Users/zafu/Documents/mygit/appFuse
+
+catalina_home=$CATALINA_HOME
+
+if [ -d "$catalina_home" ]
+then
+	tomcat_webapp=$CATALINA_HOME/webapps
+else
+    echo " Please setup the CATALINA_HOME to your system env!  "  
+    tomcat_webapp=/Users/zafu/Documents/tools/apache-tomcat-7.0.55/webapps
+fi
+#tomcat_webapp=/Users/zafu/Documents/tools/apache-tomcat-7.0.55/webapps
+project_code_base=./../
+#project_code_base=/Users/zafu/Documents/mygit/appFuse
 compiled_target=$project_code_base/$app/target/$app_name.war
 tomcat_war=$tomcat_webapp/$app_name.war
 
-src_cfg_app_loc=$project_code_base/JLUX_eqc/src/main/webapp/WEB-INF/applications/*.xml
-dest_cfg_app_loc_for_testing=$project_code_base/JLUX_eqc/src/main/resources
+src_cfg_app_loc=$project_code_base/$app/src/main/webapp/WEB-INF/applications/*.xml
+dest_cfg_app_loc_for_testing=$project_code_base/$app/src/main/resources
 
 jsp_folder=$project_code_base/$app/src/main/webapp/WEB-INF/views/content/home/*.jsp
 tomcat_jsp=$tomcat_webapp/$app_name/WEB-INF/views/content/home
