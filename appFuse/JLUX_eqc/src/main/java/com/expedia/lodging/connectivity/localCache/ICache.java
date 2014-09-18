@@ -7,7 +7,9 @@ import java.util.List;
 //@Bean
 //@Singleton
 
+
 import com.expedia.lodging.connectivity.entity.EQCLocale;
+import com.expedia.lodging.connectivity.entity.LocaleNavLink;
 
 public interface ICache {
 
@@ -23,4 +25,6 @@ public interface ICache {
 	
 	public List<EQCLocale> getLocaleCache();
 
+	
+	public List<LocaleNavLink> findAllNavLinkTextByLocaleId(Integer localeId);
 }

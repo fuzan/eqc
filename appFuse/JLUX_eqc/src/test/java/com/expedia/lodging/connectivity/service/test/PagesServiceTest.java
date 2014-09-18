@@ -28,7 +28,7 @@ public class PagesServiceTest {
 	@Test
 	public void testFindPagesByPermalink() {
 		Pages p = null;
-		when(pages.findPagesByPermalink("tt")).thenAnswer(new Answer<Pages>() {
+		when(pages.findPagesByPermalink("/content/home")).thenAnswer(new Answer<Pages>() {
 			public Pages answer(InvocationOnMock invocation) throws Throwable {
 				Pages p = new Pages();
 				p.setId(1);
@@ -36,9 +36,8 @@ public class PagesServiceTest {
 			}
 		});
 
+		p = service.findPagesByPermalink("test");
 		assertNull(p);
-		p = service.findPagesByPermalink("tt");
-		assertNotNull(p.getId());
-		assertTrue(p.getId() > 0);
+		assertTrue(p == null);
 	}
 }

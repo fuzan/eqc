@@ -10,6 +10,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.expedia.lodging.connectivity.entity.EQCLocale;
+import com.expedia.lodging.connectivity.entity.LocaleNavLink;
+import com.expedia.lodging.connectivity.repository.IContent;
 import com.expedia.lodging.connectivity.repository.IEQCLocale;
 import com.expedia.lodging.connectivity.util.Validation;
 
@@ -24,6 +26,9 @@ public class LocaleMapCache implements ICache {
 
 	@Autowired
 	public IEQCLocale locale;
+	
+	@Autowired
+	public IContent content;
 	
 	private Map<String, Integer> localeCodeAndId = new HashMap<String, Integer>();
 
@@ -88,5 +93,12 @@ public class LocaleMapCache implements ICache {
 	public List<EQCLocale> getLocaleCache(){
 		return this.locales;
 	}
+
+	public List<LocaleNavLink> findAllNavLinkTextByLocaleId(Integer localeId) {
+		// TODO Auto-generated method stub
+		return content.findAllNavLinkTextByLocaleId(localeId);
+	}
+	
+	
 
 }
