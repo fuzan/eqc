@@ -5,17 +5,16 @@ app=JLUX_eqc
 app_name=$app
 
 catalina_home=$CATALINA_HOME
-
+tomcat_webapp=/Users/zafu/Documents/tools/apache-tomcat-7.0.55/webapps
 if [ -d "$catalina_home" ]
 then
 	tomcat_webapp=$CATALINA_HOME/webapps
 else
     echo " Please setup the CATALINA_HOME to your system env!  "  
-    tomcat_webapp=/Users/zafu/Documents/tools/apache-tomcat-7.0.55/webapps
 fi
-#tomcat_webapp=/Users/zafu/Documents/tools/apache-tomcat-7.0.55/webapps
 project_code_base=./../
-#project_code_base=/Users/zafu/Documents/mygit/appFuse
+
+
 compiled_target=$project_code_base/$app/target/$app_name.war
 tomcat_war=$tomcat_webapp/$app_name.war
 
