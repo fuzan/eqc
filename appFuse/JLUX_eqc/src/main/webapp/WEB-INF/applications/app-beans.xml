@@ -12,4 +12,13 @@ http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
 	<bean id="EQCLocaleRepo" class="com.expedia.lodging.connectivity.repository.imp.EQCLocaleImp"></bean>
 	<bean id="pageRepo" class="com.expedia.lodging.connectivity.repository.imp.PagesImp"></bean>
 	
+	<!-- O/X mapping -->
+    <bean id="convertor" class="com.expedia.lodging.connectivity.DTO.LeftNavMenuXMLConvertor">
+        <property name="marshaller" ref="castorMarshaller" />
+        <property name="unmarshaller" ref="castorMarshaller" />
+    </bean>
+    <bean id="castorMarshaller" class="org.springframework.oxm.castor.CastorMarshaller"/>
+	<!-- O/X mapping -->
+	
+	
 </beans>

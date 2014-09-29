@@ -5,6 +5,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import com.expedia.lodging.connectivity.localCache.ICache;
 import com.expedia.lodging.connectivity.service.IContentAndNavLinkLocaleService;
+import com.expedia.lodging.connectivity.service.ILeftNavMenuService;
 import com.expedia.lodging.connectivity.service.ILocaleService;
 import com.expedia.lodging.connectivity.service.IPagesService;
 
@@ -22,6 +23,9 @@ public abstract class BaseController {
 	
 	@Autowired
 	protected ICache cache;
+	
+	@Autowired
+	protected ILeftNavMenuService testNav;
 	
 	
 	

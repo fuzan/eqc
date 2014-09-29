@@ -1,5 +1,6 @@
 package com.expedia.lodging.connectivity.controller;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 import java.util.Map;
@@ -11,6 +12,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import com.expedia.lodging.connectivity.DTO.LeftNavMenu;
+import com.expedia.lodging.connectivity.DTO.ListLeftMenu;
 import com.expedia.lodging.connectivity.entity.EQCLocale;
 import com.expedia.lodging.connectivity.entity.LocaleContent;
 import com.expedia.lodging.connectivity.entity.LocaleNavLink;
@@ -64,4 +67,37 @@ public class HomeController extends BaseController{
 	}
 	
 	
+	@RequestMapping("/test")
+	public String testUrl(){
+		testNav.getData();
+		
+		
+		LeftNavMenu l = new LeftNavMenu();
+		l.setName("mkyong");
+		l.setAge(30);
+		
+		
+		LeftNavMenu l1 = new LeftNavMenu();
+		l1.setName("mkyong1");
+		l1.setAge(31);
+		
+		List<LeftNavMenu> llm = new ArrayList<LeftNavMenu>();
+		llm.add(l);
+		llm.add(l1);
+		
+		ListLeftMenu lm = new ListLeftMenu();
+		lm.setList(llm);
+		
+		testNav.setDate(lm);
+		
+		
+		return null;
+	}
+	
+	
 }
+
+
+
+
+
